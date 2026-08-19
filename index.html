@@ -1,82 +1,301 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Rashmi Chaudhary</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rashmi Chaudhary — AI Enablement, Responsible AI, Learning Design and Business Transformation portfolio.">
+    <title>Rashmi Chaudhary | AI Enablement & Transformation</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 20px;
-            background: #f5f7fa;
+        :root {
+            --ink: #18212f;
+            --muted: #667085;
+            --line: #e5e7eb;
+            --surface: #ffffff;
+            --bg: #f7f8fb;
+            --accent: #5b5bd6;
+            --accent-soft: #efefff;
+            --dark: #20253a;
         }
 
-        .card {
-            background: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+            color: var(--ink);
+            background: linear-gradient(180deg, #f8f9fc 0%, #f3f5f9 100%);
+            line-height: 1.6;
+        }
+
+        .wrap {
+            width: min(1100px, calc(100% - 40px));
+            margin: 0 auto;
+        }
+
+        header {
+            padding: 72px 0 36px;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 7px 12px;
+            border-radius: 999px;
+            background: var(--accent-soft);
+            color: var(--accent);
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: .03em;
         }
 
         h1 {
-            color: #1a1a1a;
+            margin: 18px 0 12px;
+            font-size: clamp(38px, 6vw, 68px);
+            line-height: 1.02;
+            letter-spacing: -0.045em;
+            max-width: 850px;
         }
 
-        .subtitle {
-            color: #666;
-            margin-bottom: 30px;
+        .lead {
+            max-width: 780px;
+            margin: 0;
+            font-size: 19px;
+            color: var(--muted);
         }
 
-        a {
+        .positioning {
+            margin-top: 22px;
+            font-weight: 650;
+            color: var(--dark);
+        }
+
+        main { padding-bottom: 68px; }
+
+        .section-title {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            gap: 20px;
+            margin: 22px 0 14px;
+        }
+
+        h2 {
+            margin: 0;
+            font-size: 24px;
+            letter-spacing: -0.02em;
+        }
+
+        .section-note {
+            margin: 0;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .card {
             display: block;
-            margin: 15px 0;
-            padding: 15px;
-            background: #eef3ff;
-            border-radius: 8px;
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            padding: 24px;
             text-decoration: none;
-            color: #1a1a1a;
-            font-size: 18px;
+            color: inherit;
+            box-shadow: 0 8px 24px rgba(20, 30, 55, .05);
+            transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
         }
 
-        a:hover {
-            background: #dde8ff;
+        .card:hover {
+            transform: translateY(-3px);
+            border-color: #cfd2ff;
+            box-shadow: 0 14px 30px rgba(20, 30, 55, .09);
+        }
+
+        .card.featured {
+            border-color: #d9dafd;
+            background: linear-gradient(180deg, #fbfbff 0%, #ffffff 100%);
+        }
+
+        .icon {
+            font-size: 28px;
+            line-height: 1;
+        }
+
+        .card h3 {
+            margin: 14px 0 8px;
+            font-size: 20px;
+            letter-spacing: -0.02em;
+        }
+
+        .card p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 15px;
+        }
+
+        .tag {
+            display: inline-block;
+            margin-top: 16px;
+            color: var(--accent);
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .principles {
+            margin-top: 34px;
+            background: var(--dark);
+            color: #fff;
+            border-radius: 22px;
+            padding: 28px;
+        }
+
+        .principles h2 { color: #fff; }
+
+        .principles p {
+            margin: 10px 0 0;
+            color: #c8cede;
+            max-width: 760px;
+        }
+
+        .pill-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 9px;
+            margin-top: 18px;
+        }
+
+        .pill {
+            padding: 8px 12px;
+            border: 1px solid #444b66;
+            border-radius: 999px;
+            font-size: 13px;
+            color: #eef0f7;
+        }
+
+        .links {
+            margin-top: 34px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 44px;
+            padding: 0 16px;
+            border-radius: 12px;
+            background: var(--surface);
+            border: 1px solid var(--line);
+            text-decoration: none;
+            color: var(--ink);
+            font-weight: 650;
+        }
+
+        .button.primary {
+            background: var(--accent);
+            color: #fff;
+            border-color: var(--accent);
+        }
+
+        footer {
+            padding: 0 0 36px;
+            color: #8a93a5;
+            font-size: 13px;
+        }
+
+        @media (max-width: 760px) {
+            header { padding-top: 48px; }
+            .grid { grid-template-columns: 1fr; }
+            .section-title { display: block; }
+            .section-note { margin-top: 5px; }
         }
     </style>
 </head>
-
 <body>
+    <header class="wrap">
+        <span class="eyebrow">AI ENABLEMENT · RESPONSIBLE AI · TRANSFORMATION</span>
+        <h1>Rashmi Chaudhary</h1>
+        <p class="lead">I work at the intersection of AI, learning, people and business transformation — turning emerging AI capabilities into practical, adoptable ways of working.</p>
+        <p class="positioning">MBA · IIT Roorkee &nbsp;|&nbsp; AI Adoption &nbsp;|&nbsp; Learning Design &nbsp;|&nbsp; Business Transformation</p>
+    </header>
 
-<div class="card">
+    <main class="wrap">
+        <div class="section-title">
+            <h2>Explore the portfolio</h2>
+            <p class="section-note">Selected work, learning and practical experiments</p>
+        </div>
 
-<h1>Rashmi Chaudhary</h1>
+        <section class="grid">
+            <a class="card featured" href="https://github.com/rashmichaudhary24/responsible-ai-governance">
+                <div class="icon">🛡️</div>
+                <h3>Responsible AI & Governance</h3>
+                <p>A practical exploration of AI governance, RBI's FREE-AI framework, responsible adoption, and governance decisions translated into workplace application.</p>
+                <span class="tag">Seven Sutras · Decision Simulator · Governance Lens →</span>
+            </a>
 
-<p class="subtitle">
-MBA (IIT Roorkee) | AI Adoption | Learning Design | Technology Enablement
-</p>
+            <a class="card featured" href="https://rashmichaudhary24.github.io/ai-use-cases">
+                <div class="icon">🧩</div>
+                <h3>AI Adoption & Transformation</h3>
+                <p>Business use cases showing how AI can act as a reasoning partner, accelerate workflows, improve knowledge access and support organisational change.</p>
+                <span class="tag">Use cases · Adoption · Business value →</span>
+            </a>
 
-<a href="https://rashmichaudhary24.github.io/ai-tools-portfolio">
-📁 Practical AI Tools Portfolio
-</a>
+            <a class="card" href="https://rashmichaudhary24.github.io/ai-tools-portfolio">
+                <div class="icon">🛠️</div>
+                <h3>Practical AI Tools Portfolio</h3>
+                <p>Hands-on exploration of AI tools and workflows, with a focus on useful outcomes rather than tools for their own sake.</p>
+                <span class="tag">Tools · Experiments · Productivity →</span>
+            </a>
 
-<a href="https://rashmichaudhary24.github.io/ai-use-cases">
-📚 AI Adoption & Transformation Use Cases
-</a>
+            <a class="card" href="https://github.com/rashmichaudhary24/genai-learning-journal">
+                <div class="icon">📖</div>
+                <h3>GenAI Learning Journal</h3>
+                <p>A learning record covering AI foundations, modern AI systems, prompting, embeddings, RAG, evaluation and responsible AI.</p>
+                <span class="tag">Learning journey · Notes · Practice →</span>
+            </a>
 
-<a href="https://rashmichaudhary24.github.io/certifications">
-🏆 Professional Certifications
-</a>
+            <a class="card" href="https://rashmichaudhary24.github.io/learning-transformation-case-study">
+                <div class="icon">🌱</div>
+                <h3>Learning Transformation Case Study</h3>
+                <p>A workforce and learning transformation story focused on building capability at scale and connecting learning to business readiness.</p>
+                <span class="tag">Capability building · Learning · Scale →</span>
+            </a>
 
-<a href="https://github.com/rashmichaudhary24/genai-learning-journal">
-💻 GenAI Learning Journal
-</a>
+            <a class="card" href="https://rashmichaudhary24.github.io/change-management-case-study">
+                <div class="icon">🔄</div>
+                <h3>Change Management Case Study</h3>
+                <p>A practical view of change, stakeholder adoption and behaviour shifts — the human side of technology-enabled transformation.</p>
+                <span class="tag">Change · Stakeholders · Adoption →</span>
+            </a>
+        </section>
 
-<a href="https://github.com/rashmichaudhary24/genai-learning-journal/blob/main/AI-Models-Comparative-Exercise.md">
-🧠 Featured Learning Note: AI Models — One Prompt, Four Ways of Thinking
-</a>
-<a href="https://www.linkedin.com/in/rashmi-chaudhary-ai-enablement/">
-💼 LinkedIn Profile
-</a>
-</div>
+        <section class="principles">
+            <h2>How I think about AI transformation</h2>
+            <p>The technology is only one part of the equation. Sustainable AI adoption sits at the intersection of useful business problems, responsible governance, human capability and behaviour change.</p>
+            <div class="pill-row">
+                <span class="pill">AI as a reasoning partner</span>
+                <span class="pill">Knowledge management</span>
+                <span class="pill">Workflow acceleration</span>
+                <span class="pill">Responsible AI adoption</span>
+                <span class="pill">Capability building</span>
+                <span class="pill">Change & adoption</span>
+            </div>
+        </section>
 
+        <div class="links">
+            <a class="button primary" href="https://www.linkedin.com/in/rashmi-chaudhary-ai-enablement/">LinkedIn Profile</a>
+            <a class="button" href="https://rashmichaudhary24.github.io/certifications">Certifications</a>
+            <a class="button" href="https://github.com/rashmichaudhary24">GitHub Profile</a>
+        </div>
+    </main>
+
+    <footer class="wrap">Rashmi Chaudhary · AI Enablement · Responsible AI · Learning & Transformation</footer>
 </body>
 </html>
